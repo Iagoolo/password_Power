@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-fundo: #0B0E14;
+    --bg-cartao: #151A23;
+    --texto-claro: #E5E7EB;
+    --texto-mutado: #9CA3AF;
+    --cor-destaque: #00FF66;
+    --destaque-hover: #00CC52;
+    --fonte: "Inter";
+}
+
+body {
+    background-color: var(--bg-fundo);
+    color: var(--texto-claro);
+    font-family: var(--fonte), sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 50px 100px 100px 50px;
+}
+
+main {
+    background-color: var(--bg-cartao);
+    color: var(--texto-mutado);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 13px;
+    box-shadow: 0 8px 15px #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"], input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--bg-fundo);
+    color: var(--texto-claro)
+}
+
+input[type="checkbox"], input[type="range"] {
+    accent-color: var(--cor-destaque);
+    cursor: pointer;
+}
+
+input[type="text"], input[type="password"] {
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid var(--cor-destaque);
+}
+
+button {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--cor-destaque);
+    color: var(--bg-cartao);
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+}
+
+button:hover {
+    background-color: var(--destaque-hover);
+    transform: scale(0.98);
+}
+
+.box-resultado {
+    display: flex;
+    margin-top: 10px;
+    gap: 7px;
+}
+
+#password {
+    flex: 1;
+    margin-top: 10px;
+}
+
+#copiar {
+    width: auto;
+}
+
+.opcoesSenha {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 12px;
+ }
+
+ .opcoesSenha div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ }
+
+ .deslizante {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+ }
+
+#medidor {
+    height: 8px;
+    width: 0%;
+    background-color: #2A303C;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+.gerar {
+    margin-top: 20px;
+}
+
+.validation-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 7px;
+}
+
+.senhaTestada {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
