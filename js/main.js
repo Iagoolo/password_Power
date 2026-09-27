@@ -37,6 +37,7 @@ senhaATestar.addEventListener('input', () => {
     if (senhaUsuario.length === 0) {
         medidor.style.backgroundColor= "gray";
         medidor.style.width = "0%"
+        classificacaoForca.textContent = "";
         return;
     }
 
@@ -47,25 +48,25 @@ senhaATestar.addEventListener('input', () => {
 
     let valorSenha = forcaSenha(senhaUsuario.length, possuiMinuscula, possuiMaiuscula, possuiNumeros, possuiEspeciais);
     const forca = classificarForca(valorSenha);
-    classificacaoForca.textContent = forca;
+    classificacaoForca.textContent = forca.texto;
 
-    switch(forca){
-        case "Fraca":
+    switch(forca.nivel){
+        case 1:
             medidor.style.backgroundColor = "red";
             medidor.style.width = "25%"
             break;
         
-        case "Razoável":
+        case 2:
             medidor.style.backgroundColor = "yellow";
             medidor.style.width = "50%"
             break;
         
-        case "Forte":
+        case 3:
             medidor.style.backgroundColor = "blue";
             medidor.style.width = "75%"
             break;
 
-        case "Muito forte":
+        case 4:
             medidor.style.backgroundColor = "green";
             medidor.style.width = "100%"
             break;
