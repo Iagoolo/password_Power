@@ -124,7 +124,7 @@ button:hover {
     gap: 15px;
  }
 
-#medidor {
+.medidor {
     height: 8px;
     width: 0%;
     background-color: #2A303C;
